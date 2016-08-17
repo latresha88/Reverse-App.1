@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class Reverse {
+
+
+	public static void main(String[] args) 
+	{
+		Scanner scanner = new Scanner(System.in);
+		
+		System.out.println("enter number and press enter:"); 
+		
+		int Value = scanner.nextInt(); //created by user input and assigned to Value
+		int reverseValue = 0; // the reverse of the inputed Value
+		int actualValue = 0; // the remainder
+		
+		
+		while( Value  != 0) // loop until value becomes 0
+				{actualValue=  Value % 10; // take the remainder of the value divided by 10 to give us the actual value
+				reverseValue = reverseValue * 10 + actualValue; // the reverse value is equivalent to the reverse of value time 10 + the remainder
+				Value = Value / 10;
+				}
+				System.out.println("reverse of entered number is:" + reverseValue);
+
+}
+}
